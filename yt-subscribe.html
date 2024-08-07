@@ -3,8 +3,11 @@
     <head>
         <title>DOM Project</title>
         <style>
+            body{
+                font-family: Arial;
+            }
             button{
-                margin-bottom: 20px;
+                margin-bottom: 30px;
             }
             .subscribe-button{
                 color: white;
@@ -22,6 +25,18 @@
                 cursor: pointer;
                 border-radius: 20px;
             }
+            .cost-input{
+                font-size: 15px;
+                padding: 10px;
+            }
+            .calculate-button{
+                padding: 12px 15px;
+                color: white;
+                background-color: green;
+                border: none;
+                font-size: 15px;
+                cursor: pointer;
+            }
             
         </style>
     </head>
@@ -34,15 +49,15 @@
         </button> 
 
 
-        <p>Amazon Shipping Calculator</p>
+        <p><strong>Amazon Shipping Calculator</strong></p>
         <p>Orders under $40 = +$10 shipping.</p>
         <p>Orders over $40 = FREE shipping.</p>
-        <input placeholder="Cost of Order" class="js-cost-input" onkeydown="
+        <input placeholder="Cost of Order" class="js-cost-input cost-input" onkeydown="
             handleCostKeyDown(event);
         ">
         <button onclick="
         calculateTotal();
-        ">Calculate</button>
+        " class="calculate-button">Calculate</button>
         <p class="js-total-cost"></p>
     
     <script>
